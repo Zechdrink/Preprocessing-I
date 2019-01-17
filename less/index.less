@@ -30,7 +30,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+	line-height: 1.25;
 }
 ol, ul {
 	list-style: none;
@@ -48,12 +48,514 @@ table {
 	border-spacing: 0;
 }
 
+// ANIMATIONS, MIXIN'S AND VARIABLES #LIFEHACKS FOR QUICK CODING ******************************
+// *****************************************************************
+
+@keyframes itsAlive {
+    0% {
+		transform: scale(1, 1) translate(0, 3rem);
+		
+	}
+	
+	25% {
+		transform: scale(.2, .2) translate(0, 3rem);
+		background: @para1;
+		
+	}
+
+    50% {
+		transform: scale(1.5, 1.5) translate(0, 3rem);
+		background: @para2;
+      
+    } 
+
+	75% {
+		transform: scale(0, 0) translate(0, 3rem);
+		background: @para3;
+		
+	}
+    100% {
+		transform: scale(1, 1) translate(0, 3rem);
+		background: @para4
+        
+    } 
+}
+
+
+@keyframes colorPulse {
+    0% {
+		
+	}
+	
+	25% {
+
+		color: @para1;
+		text-decoration-color: @para1;;
+		
+	}
+
+    50% {
+
+		color: @para2;
+		text-decoration-color: @para2;
+      
+    } 
+
+	75% {
+	
+		color: @para3;
+		text-decoration-color: @para3;
+		
+	}
+    100% {
+	
+		color: @para4;
+		text-decoration-color: @para4;
+        
+	} }
+	
+	@keyframes backgroundPulse {
+		0% {
+			
+		}
+		
+		25% {
+	
+			background: @para1;
+			
+			
+		}
+	
+		50% {
+	
+			background: @para2;
+		
+		  
+		} 
+	
+		75% {
+		
+			background: @para3;
+			
+			
+		}
+		100% {
+		
+			background: @para4;
+			
+			
+		} 
+
+}
+
+.centered() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rowed() {
+	  display:flex;
+	  justify-content: space-between;
+	  align-items: center;
+
+  }
+
+  .columned() {
+	  display:flex;
+	  flex-direction: column;
+	  justify-content: center;
+	  }
+  @blackground: #19181A;
+  @para1: #479761;
+  @para2: #CEBC81;
+  @para3: #A16E83;
+  @para4: #97AABD;
+  @textcolor: #B19F9E;
+  @middleborder: .5rem inset rgb(24, 23, 23);
+
+// END OF MIXINS
+
 /* Set every element's box-sizing to border-box */
+
 * {
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+html {
+	font-size: 62.5%;
 }
+
+html, body {
+height: 100%;
+}
+
+.container {
+	border-top: 1rem solid black;
+	border-top: 2rem solid black;
+	max-width: 88rem;
+	margin: auto;
+	font-size: 1.6rem;
+	height: 176rem;
+	background: @blackground;
+	color: @textcolor;
+	
+	.intro {
+		width: 100%;
+		height: 50rem;
+	   .rowed();
+		border-bottom: .5rem solid black; 
+		background: @blackground;
+   }
+   
+//    STYLING THE LEFT SIDE OF THE TOP SECTIONS **************************
+// ***********************************************************************
+
+   header {
+	padding-bottom: 1rem;
+	font-size: 1.8rem;
+	font-style: oblique;
+	display: flex;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+	
+   }
+
+   header nav {
+	.columned();
+	}
+
+	nav a{
+		padding: 1.5rem;
+		border: .3rem solid @blackground;
+		width: 30rem;
+		text-align: center;
+		color: @blackground;
+	}
+
+// STYLING THE RIGHT SIDE OF THE TOP SECTION **************************
+// ********************************************************************
+
+   .intro section {
+	   font-size: 1.6rem;
+		height: 100%;
+		width: 100%;
+	   .columned();
+	   margin-right: 3rem
+   }
+
+   .intro h1 {
+	   margin-bottom: 2rem;
+	   font-size: 3rem;
+	   text-align: center;
+	   text-decoration: double underline @textcolor;
+	   animation: colorPulse 7s linear infinite;
+	
+   }
+
+   .intro section p {
+	   text-align: center;
+	   font-size: 1.8rem;
+	   margin: .5rem;
+	   padding-bottom: 1.5rem;
+   }
+
+   .intro button {
+	   padding: 1.5rem;
+	   width: 40.4rem;
+	   height: 5.8rem;
+	   border: 3px solid @blackground;
+	   font-size: 1.6rem;
+	   font-style: oblique;
+	   text-decoration: underline;
+	   color: @blackground;
+	   animation: itsAlive 5s linear infinite; //ANIMATION EFFECT HERE <------------------------
+       transform-origin: center;
+       position: relative;
+
+   }
+
+//    Some HOVERING AND ACTIVE INTERACTIONS <------------------------------- HOVER ACTIVE STUFF
+   a{
+	   transition: 1s ease;
+   }
+
+   a:active{
+	transform: scale(2,2) translate(0, 3rem);
+	transition: 1s ease;
+   }
+
+// MIDDDDDDDDDDDDDDDLE SECTION BEGGINS
+
+   .fourSections {
+		.rowed();
+		padding-top: 5rem;
+		flex-wrap: wrap;
+		height: 80rem;
+		font-size: 1.8rem;
+   }
+
+   .sect {
+	   width: 38%;
+	   height: 30rem;
+	   padding: 1rem;
+	   margin: 1rem;
+	   margin-left: 3.5rem;
+	   margin-right: 3.5rem;
+
+   }
+
+   .one {
+		border: @middleborder;
+		text-align: center;
+		background: @para1;
+		color: @blackground;
+		transition: 2s ease;
+   }
+
+   .one:hover {
+	transform: scale(1.5, 1.5) translate(-10rem, 0);
+	color: black;
+   }
+
+   .one h2 {
+	   text-decoration: double underline;
+	   transition: 2s ease;
+   }
+
+   .one h2:hover {
+	transform: scale(1.5, 1.5) translate(-10rem, -4rem);
+	color: black;
+	transition: 2s ease;
+   }
+   
+
+   .two {
+		border: @middleborder;
+		text-align: center;
+		background: @para3;
+		color: @blackground;
+		transition: 2s ease;
+		padding-top: 7rem;
+   }
+
+   .two:hover {
+	transform: scale(1.5, 1.5) translate(0, 3rem) rotate(-720deg);
+	border-radius: 100rem;
+	font-size: 1.2rem;
+	
+   }
+
+   .two h2 {
+	transition: 1s ease;
+	text-decoration: double underline;
+}
+
+   .two h2:hover {
+	transform: rotate(360deg);
+	color: black;
+	transition: 1s ease;
+   }
+
+
+
+   .three {
+	   border: @middleborder;
+	   text-align: center;
+	   background: @para2;
+	   color: @blackground;
+	   transition: 2s ease;
+   }
+
+   .sect li {
+	   list-style: square;
+	   font-size: 1.8rem;
+	   text-align: left;
+	   margin-left: 9rem;
+   }
+
+   .three h2, .four h2 {
+	margin-top: 3rem;
+	text-decoration: double underline;
+	padding-top: 1rem;
+	font-size: 2rem;
+   }
+
+   .three:hover {
+	transform: rotate3d(1, 1, 1, 360deg) scale3d(.8, 1.4, 1);
+}
+
+   .four {
+	border: @middleborder;
+	text-align: center;
+	background: @para4;
+	transition: 2s ease;
+	color: @para4;
+   } 
+
+
+   .four:hover {
+	transform: scale(1.5, 1.5) translate(0, 3rem);
+	color: @blackground;
+   }
+
+//    THE CONTACT SECTION BEGINS HERE <------------------------------------------------------<------------------------------
+
+.contactMe section {
+	width: 100%;
+	height: 40rem;
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 3rem;
+}
+.contactMe h2 {
+	font-size: 3rem;
+	color: @para2;
+}
+.contactMe button {
+		margin: .3rem;
+		padding: .5rem;
+		border: .3rem solid @blackground;
+		width: 40rem;
+		text-align: center;
+		color: @blackground;
+		animation: backgroundPulse 4s linear infinite;
+		font-size: 1.8rem;
+		transition: 1s ease;
+		transform-origin: center;
+}
+
+.contactMe button:hover {
+	color: white;
+	animation: colorPulse 3s linear infinite;
+	background: @blackground;
+	font-size: 3rem;
+}
+
+	footer {
+		text-align: center;
+		font-size: 2rem;
+		padding-bottom: 5rem;
+		text-decoration: double overline;
+	}
+
+	
+}
+
+@media( max-width: 500px){
+	.container {
+	margin: auto;
+	font-size: 1.6rem;
+	height: 250rem;
+	border: none;
+	}
+
+	.container .intro {
+		padding-top: 5rem;
+		padding-bottom: 5rem;
+		display:flex;
+	  	flex-direction: column-reverse;
+	  	justify-content: center;
+		 height: 60rem;
+	}
+
+	.header {
+		height: 50rem;
+		width: 100%;
+	}
+
+
+	.container .intro section {
+		padding-top: 5rem;
+		height: 25rem;
+		width: 80%;
+		padding-bottom: 5rem;
+	}
+
+	.container .intro section p {
+		font-size: 1.8rem;;
+	}
+
+	.container .intro section button {
+		visibility: hidden;
+	}
+
+	.container header nav a{
+		transition: 1s ease;
+	}
+ 
+	.container header nav a:active{
+	 transform: scale(.5, .5) translate(0, .5rem);
+	 transition: 1s ease;
+	}
+
+	.container .fourSections {
+		display: flex;
+		flex-direction: column;
+		height: 140rem;
+	}
+
+	.fourSections .sect {
+		height: 25rem;
+		width: 80%;
+	}
+
+	.fourSections .one {
+		margin-top: 2rem;
+		padding-top: 2rem;
+	}
+
+	.fourSections .one:hover {
+		transform: rotate3d(0, 1, 0.5, 360deg);
+		transition: 3s ease;
+	}
+
+	.fourSections .two {
+		padding-top: 2rem;
+		transition: 3s ease;
+		animation: backgroundPulse 10s linear infinite;
+		transition: 2s ease;
+	}
+
+	.fourSections .two:hover {
+		transition: 2s ease;
+		border-radius: 1rem;
+		font-size: 100%;
+		font-style: oblique;
+		transform: none;
+		color: white;
+		animation: none;
+		background:none;
+	}
+
+	.fourSections .three {
+		transition: 4s ease;
+	}
+
+	.fourSections .three li {
+		margin-left: 13rem;
+	}
+
+	.fourSections .three:hover {
+		transform: rotate(360deg);
+		transition: 4s ease;
+	}
+ 
+	.fourSections .four ul {
+		margin-bottom: 3rem;
+		margin-left: 3rem;
+	}
+
+	.fourSections .four:hover {
+		transform: none;
+	}
+}
+
+
+	
+
+
 
