@@ -266,10 +266,10 @@ body {
   position: relative;
 }
 .container a {
-  transition: 1s ease;
+  transition: 0.1s ease;
 }
 .container a:active {
-  transform: scale(2, 2) translate(0, 3rem);
+  transform: translate(0, 3rem) scale(2, 2);
   transition: 1s ease;
 }
 .container .fourSections {
@@ -301,6 +301,7 @@ body {
   color: black;
 }
 .container .one h2 {
+  padding-top: 2.5rem;
   text-decoration: double underline;
   transition: 2s ease;
 }
@@ -315,12 +316,16 @@ body {
   background: #A16E83;
   color: #19181A;
   transition: 2s ease;
-  padding-top: 7rem;
+  padding-top: 3rem;
 }
 .container .two:hover {
   transform: scale(1.5, 1.5) translate(0, 3rem) rotate(-720deg);
   border-radius: 100rem;
   font-size: 1.2rem;
+  height: 26rem;
+  width: 26rem;
+  padding: 3rem;
+  padding-top: 5rem;
 }
 .container .two h2 {
   transition: 1s ease;
@@ -472,6 +477,8 @@ body {
     color: white;
     animation: none;
     background: none;
+    height: 35rem;
+    width: 30rem;
   }
   .fourSections .three {
     transition: 4s ease;

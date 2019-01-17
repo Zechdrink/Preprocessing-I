@@ -279,11 +279,11 @@ height: 100%;
 
 //    Some HOVERING AND ACTIVE INTERACTIONS <------------------------------- HOVER ACTIVE STUFF
    a{
-	   transition: 1s ease;
+	   transition: .1s ease;
    }
 
    a:active{
-	transform: scale(2,2) translate(0, 3rem);
+	transform: translate(0, 3rem) scale(2,2);
 	transition: 1s ease;
    }
 
@@ -321,6 +321,7 @@ height: 100%;
    }
 
    .one h2 {
+	   padding-top: 2.5rem;
 	   text-decoration: double underline;
 	   transition: 2s ease;
    }
@@ -338,14 +339,17 @@ height: 100%;
 		background: @para3;
 		color: @blackground;
 		transition: 2s ease;
-		padding-top: 7rem;
+		padding-top: 3rem;
    }
 
    .two:hover {
 	transform: scale(1.5, 1.5) translate(0, 3rem) rotate(-720deg);
 	border-radius: 100rem;
 	font-size: 1.2rem;
-	
+	height:26rem;
+	width:26rem; 
+	padding: 3rem;
+	padding-top: 5rem;
    }
 
    .two h2 {
@@ -519,6 +523,7 @@ height: 100%;
 		transition: 3s ease;
 		animation: backgroundPulse 10s linear infinite;
 		transition: 2s ease;
+		
 	}
 
 	.fourSections .two:hover {
@@ -529,7 +534,10 @@ height: 100%;
 		transform: none;
 		color: white;
 		animation: none;
-		background:none;
+		background: none;
+		height: 35rem;
+		width: 30rem;
+		
 	}
 
 	.fourSections .three {
