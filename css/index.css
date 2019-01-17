@@ -1,1 +1,493 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1.25;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+@keyframes itsAlive {
+  0% {
+    transform: scale(1, 1) translate(0, 3rem);
+  }
+  25% {
+    transform: scale(0.2, 0.2) translate(0, 3rem);
+    background: #479761;
+  }
+  50% {
+    transform: scale(1.5, 1.5) translate(0, 3rem);
+    background: #CEBC81;
+  }
+  75% {
+    transform: scale(0, 0) translate(0, 3rem);
+    background: #A16E83;
+  }
+  100% {
+    transform: scale(1, 1) translate(0, 3rem);
+    background: #97AABD;
+  }
+}
+@keyframes colorPulse {
+  25% {
+    color: #479761;
+    text-decoration-color: #479761;
+  }
+  50% {
+    color: #CEBC81;
+    text-decoration-color: #CEBC81;
+  }
+  75% {
+    color: #A16E83;
+    text-decoration-color: #A16E83;
+  }
+  100% {
+    color: #97AABD;
+    text-decoration-color: #97AABD;
+  }
+}
+@keyframes backgroundPulse {
+  25% {
+    background: #479761;
+  }
+  50% {
+    background: #CEBC81;
+  }
+  75% {
+    background: #A16E83;
+  }
+  100% {
+    background: #97AABD;
+  }
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+html,
+body {
+  height: 100%;
+}
+.container {
+  border-top: 1rem solid black;
+  border-top: 2rem solid black;
+  max-width: 88rem;
+  margin: auto;
+  font-size: 1.6rem;
+  height: 176rem;
+  background: #19181A;
+  color: #B19F9E;
+}
+.container .intro {
+  width: 100%;
+  height: 50rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.5rem solid black;
+  background: #19181A;
+}
+.container header {
+  padding-bottom: 1rem;
+  font-size: 1.8rem;
+  font-style: oblique;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+.container header nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container nav a {
+  padding: 1.5rem;
+  border: 0.3rem solid #19181A;
+  width: 30rem;
+  text-align: center;
+  color: #19181A;
+}
+.container .intro section {
+  font-size: 1.6rem;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 3rem;
+}
+.container .intro h1 {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  text-align: center;
+  text-decoration: double underline #B19F9E;
+  animation: colorPulse 7s linear infinite;
+}
+.container .intro section p {
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 0.5rem;
+  padding-bottom: 1.5rem;
+}
+.container .intro button {
+  padding: 1.5rem;
+  width: 40.4rem;
+  height: 5.8rem;
+  border: 3px solid #19181A;
+  font-size: 1.6rem;
+  font-style: oblique;
+  text-decoration: underline;
+  color: #19181A;
+  animation: itsAlive 5s linear infinite;
+  transform-origin: center;
+  position: relative;
+}
+.container a {
+  transition: 1s ease;
+}
+.container a:active {
+  transform: scale(2, 2) translate(0, 3rem);
+  transition: 1s ease;
+}
+.container .fourSections {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 5rem;
+  flex-wrap: wrap;
+  height: 80rem;
+  font-size: 1.8rem;
+}
+.container .sect {
+  width: 38%;
+  height: 30rem;
+  padding: 1rem;
+  margin: 1rem;
+  margin-left: 3.5rem;
+  margin-right: 3.5rem;
+}
+.container .one {
+  border: 0.5rem inset #181717;
+  text-align: center;
+  background: #479761;
+  color: #19181A;
+  transition: 2s ease;
+}
+.container .one:hover {
+  transform: scale(1.5, 1.5) translate(-10rem, 0);
+  color: black;
+}
+.container .one h2 {
+  text-decoration: double underline;
+  transition: 2s ease;
+}
+.container .one h2:hover {
+  transform: scale(1.5, 1.5) translate(-10rem, -4rem);
+  color: black;
+  transition: 2s ease;
+}
+.container .two {
+  border: 0.5rem inset #181717;
+  text-align: center;
+  background: #A16E83;
+  color: #19181A;
+  transition: 2s ease;
+  padding-top: 7rem;
+}
+.container .two:hover {
+  transform: scale(1.5, 1.5) translate(0, 3rem) rotate(-720deg);
+  border-radius: 100rem;
+  font-size: 1.2rem;
+}
+.container .two h2 {
+  transition: 1s ease;
+  text-decoration: double underline;
+}
+.container .two h2:hover {
+  transform: rotate(360deg);
+  color: black;
+  transition: 1s ease;
+}
+.container .three {
+  border: 0.5rem inset #181717;
+  text-align: center;
+  background: #CEBC81;
+  color: #19181A;
+  transition: 2s ease;
+}
+.container .sect li {
+  list-style: square;
+  font-size: 1.8rem;
+  text-align: left;
+  margin-left: 9rem;
+}
+.container .three h2,
+.container .four h2 {
+  margin-top: 3rem;
+  text-decoration: double underline;
+  padding-top: 1rem;
+  font-size: 2rem;
+}
+.container .three:hover {
+  transform: rotate3d(1, 1, 1, 360deg) scale3d(0.8, 1.4, 1);
+}
+.container .four {
+  border: 0.5rem inset #181717;
+  text-align: center;
+  background: #97AABD;
+  transition: 2s ease;
+  color: #97AABD;
+}
+.container .four:hover {
+  transform: scale(1.5, 1.5) translate(0, 3rem);
+  color: #19181A;
+}
+.container .contactMe section {
+  width: 100%;
+  height: 40rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 3rem;
+}
+.container .contactMe h2 {
+  font-size: 3rem;
+  color: #CEBC81;
+}
+.container .contactMe button {
+  margin: 0.3rem;
+  padding: 0.5rem;
+  border: 0.3rem solid #19181A;
+  width: 40rem;
+  text-align: center;
+  color: #19181A;
+  animation: backgroundPulse 4s linear infinite;
+  font-size: 1.8rem;
+  transition: 1s ease;
+  transform-origin: center;
+}
+.container .contactMe button:hover {
+  color: white;
+  animation: colorPulse 3s linear infinite;
+  background: #19181A;
+  font-size: 3rem;
+}
+.container footer {
+  text-align: center;
+  font-size: 2rem;
+  padding-bottom: 5rem;
+  text-decoration: double overline;
+}
+@media (max-width: 500px) {
+  .container {
+    margin: auto;
+    font-size: 1.6rem;
+    height: 250rem;
+    border: none;
+  }
+  .container .intro {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    height: 60rem;
+  }
+  .header {
+    height: 50rem;
+    width: 100%;
+  }
+  .container .intro section {
+    padding-top: 5rem;
+    height: 25rem;
+    width: 80%;
+    padding-bottom: 5rem;
+  }
+  .container .intro section p {
+    font-size: 1.8rem;
+  }
+  .container .intro section button {
+    visibility: hidden;
+  }
+  .container header nav a {
+    transition: 1s ease;
+  }
+  .container header nav a:active {
+    transform: scale(0.5, 0.5) translate(0, 0.5rem);
+    transition: 1s ease;
+  }
+  .container .fourSections {
+    display: flex;
+    flex-direction: column;
+    height: 140rem;
+  }
+  .fourSections .sect {
+    height: 25rem;
+    width: 80%;
+  }
+  .fourSections .one {
+    margin-top: 2rem;
+    padding-top: 2rem;
+  }
+  .fourSections .one:hover {
+    transform: rotate3d(0, 1, 0.5, 360deg);
+    transition: 3s ease;
+  }
+  .fourSections .two {
+    padding-top: 2rem;
+    transition: 3s ease;
+    animation: backgroundPulse 10s linear infinite;
+    transition: 2s ease;
+  }
+  .fourSections .two:hover {
+    transition: 2s ease;
+    border-radius: 1rem;
+    font-size: 100%;
+    font-style: oblique;
+    transform: none;
+    color: white;
+    animation: none;
+    background: none;
+  }
+  .fourSections .three {
+    transition: 4s ease;
+  }
+  .fourSections .three li {
+    margin-left: 13rem;
+  }
+  .fourSections .three:hover {
+    transform: rotate(360deg);
+    transition: 4s ease;
+  }
+  .fourSections .four ul {
+    margin-bottom: 3rem;
+    margin-left: 3rem;
+  }
+  .fourSections .four:hover {
+    transform: none;
+  }
+}
